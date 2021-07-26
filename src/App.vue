@@ -1,11 +1,7 @@
 <template>
   <v-app>
-    <v-container grid-list>
-      <v-layout row wrap justify-center>
-        <v-flex md6>
-          <Home />
-        </v-flex>
-      </v-layout>
+    <v-container>
+      <Home />
     </v-container>
   </v-app>
 </template>

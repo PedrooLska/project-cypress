@@ -26,6 +26,7 @@ export default new Vuetify({
     values: {
       edit: 'mdi-pencil-outline',
       remove: 'mdi-close-outline',
+      add: "mdi-plus-circle"
     },
   },
 });

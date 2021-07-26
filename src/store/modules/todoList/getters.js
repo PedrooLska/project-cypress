@@ -1,5 +1,5 @@
 export default {
-    listAllTask(state) {
-        return state.listTask
-    }
+  listAllTask(state) {
+    return state.listTask
+  }
 }
