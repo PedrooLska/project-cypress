@@ -7,14 +7,13 @@
 
 <script>
 import CreateTask from '../components/Create-Task.vue'
-import TodoList from "../components/To-do-List";
+import TodoList from '../components/To-do-List'
 
 export default {
-  name: "Home",
-
+  name: 'Home',
   components: {
     CreateTask,
     TodoList
-  },
-};
+  }
+}
 </script>
