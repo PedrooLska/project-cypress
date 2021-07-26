@@ -4,6 +4,5 @@ export default {
     { id: 2, name: 'Teste 3' },
     { id: 3, name: 'Teste' }
   ],
-  taskName: '',
   erro: ''
 }

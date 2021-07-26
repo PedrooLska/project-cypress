@@ -5,19 +5,24 @@ export default {
   UPDATE_TASKNAME(state, task) {
     state.taskName = task
   },
-  CREATE_TASK(state) {
-    console.log(state.taskName)
-    if (state.taskName) {
+  CREATE_TASK(state, taskName) {
+    if (taskName) {
       const incrementID = generatedID(state)
       const newListTask = [
         ...state.listTask,
-        { id: incrementID, name: state.taskName }
+        { id: incrementID, name: taskName }
       ]
       state.listTask = newListTask
     } else {
       state.erro =
-        'Não foi possível criar uma atividade, por favor, preencha o campo.'
+        'Please fill in the field to create the activity.'
     }
+
+    state.taskName = ""
+
+    setTimeout(() => {
+      state.erro = ""
+    }, 3000)
   },
   EDIT_TASK(state, task) {
     const listTask = [...state.listTask]
@@ -29,9 +34,4 @@ export default {
     const taskRemove = listTask.findIndex((tsk) => tsk.id === task.id)
     state.listTask.splice(taskRemove, 1)
   },
-  INCREMENT_ID(state) {
-    return state.listTask.length
-      ? state.listTask[state.listTask.length - 1].id + 1
-      : 1
-  }
 }
